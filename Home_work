@@ -1,1 +1,52 @@
+from random import choice, randint
+
+
+class Shkolnik:
+    def __init__(self):
+        self.name = "Артем"
+        self.age = 10
+        self.status = "Ударник"
+        self.school = "МБОУ СОШ №19"
+        self.ocenki = []
+        self.uroki = [
+            "Физра", "Математика", "Русский Язык", "Литература", "ИЗО"
+        ]
+        self.position = False
+    def go_to_school(self):
+        if self.position:
+            print("Школьник уже в школе!")
+            return
+        self.position = True
+        print("Школьник с возмущением пошел в школу.")
+
+    def go_to_home(self):
+        if not self.position:
+            print("Школьник уже дома!")
+            return
+        self.position = False
+        print("Школьник пошел домой.")
+
+    def give_ocenka(self):
+        urok = choice(self.uroki)
+        ocenka = randint(2, 5)
+        entry = {"предмет": urok, "оценка": ocenka}
+        self.ocenki.append(entry)
+        print(f"Школьник получил оценку {ocenka} по предмету {urok}")
+        return entry
+
+    def add_urok(self):
+        urok = input("Какой урок вы хотите добавить школьнику: ")
+        if urok in self.uroki:
+            print("У школьника уже есть этот урок!")
+            return
+        self.uroki.append(urok)
+        print("Школьник зол на вас!")
+
+    def change_school(self):
+        if self.school == "МАОУ СОШ №65":
+            self.school = "МБОУ СОШ №19"
+        else:
+            self.school = "МАОУ СОШ №65"
+        print(f"Вы поменяли школу школьника на {self.school}")
+
 
