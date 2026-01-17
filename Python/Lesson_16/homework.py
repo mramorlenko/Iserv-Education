@@ -1,0 +1,42 @@
+class Character:
+    def __init__(self, hp, damage):
+        self.hp = hp
+        self.damage = damage
+
+    def heal(self):
+        if self.hp == 0:
+            print("Ваш персонаж мёртв! Вы не можете его вылечить!")
+            return
+        self.hp += 5
+        print("Персонаж вылечен."
+              f"Текущее HP: {self.hp}")
+    
+    def attack(self):
+        if self.hp == 0:
+            print("Ваш персонаж мёртв! Вы не можете атаковать!")
+            return
+        print(f"Вы наносите врагу {self.damage} урона.")
+
+
+class BowMaster(Character):
+    def __init__(self, hp, damage, arrows):
+        super().__init__(hp, damage)
+        self.arrows = arrows
+    
+    def shoot(self):
+        if self.hp == 0:
+            print("Ваш персонаж мёртв! Вы не можете стрелять!")
+            return
+        if self.arrows == 0:
+            print("У вас нет стрел для выстрела!")
+            return
+
+        self.arrows -= 1
+        print(f"Вы нанесли врагу {self.damage * 2} урона. У вас осталось {self.arrows} стрел.")
+
+
+archer = BowMaster(100, 5, 30)
+archer.attack()
+archer.heal()
+archer.shoot()
+archer.shoot()
