@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://daqshbk55la8p"]
+
+[ext_resource type="Texture2D" uid="uid://drh15l863k66n" path="res://cars (3).png" id="1_72o5o"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gnsc1"]
+radius = 14.0
+height = 58.0
+
+[node name="main_car" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_72o5o")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 1)
+shape = SubResource("CapsuleShape2D_gnsc1")
