@@ -1,17 +1,25 @@
-[gd_scene format=3 uid="uid://dceb3brh4w6n3"]
+[gd_scene load_steps=5 format=3 uid="uid://dceb3brh4w6n3"]
 
-[ext_resource type="Texture2D" uid="uid://bbku6rcu081rw" path="res://Gemini_Generated_Image_ech891ech891ech8.png" id="1_4k5x7"]
+[ext_resource type="Texture2D" uid="uid://drh15l863k66n" path="res://cars (3).png" id="1_4k5x7"]
+[ext_resource type="Script" uid="uid://co6hi0i0rrks1" path="res://script/evil_car.gd" id="1_cbu81"]
+[ext_resource type="Texture2D" uid="uid://bgpmtnscshnxa" path="res://cars (4).png" id="2_l0nfs"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_l0nfs"]
-radius = 14.9
-height = 55.82
+radius = 12.0
+height = 52.0
 
-[node name="Area2D" type="Area2D" unique_id=1971967827]
+[node name="Area2D" type="Area2D"]
 collision_layer = 2
+script = ExtResource("1_cbu81")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1336955386]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.003501892, -0.011753082)
 shape = SubResource("CapsuleShape2D_l0nfs")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1529259657]
-scale = Vector2(0.04, 0.04)
+[node name="car_1" type="Sprite2D" parent="."]
+texture = ExtResource("2_l0nfs")
+
+[node name="car_2" type="Sprite2D" parent="."]
 texture = ExtResource("1_4k5x7")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://daqshbk55la8p"]
+[gd_scene load_steps=4 format=3 uid="uid://daqshbk55la8p"]
 
 [ext_resource type="Texture2D" uid="uid://drh15l863k66n" path="res://cars (3).png" id="1_72o5o"]
 [ext_resource type="Script" uid="uid://6806dwbd6mpx" path="res://script/main_car.gd" id="1_gnsc1"]
@@ -7,13 +7,13 @@
 radius = 14.0
 height = 58.0
 
-[node name="CharacterBody2D" type="CharacterBody2D" unique_id=421688461]
+[node name="Car" type="CharacterBody2D"]
 collision_mask = 2
 script = ExtResource("1_gnsc1")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=443290908]
+[node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_72o5o")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2019463788]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, 1)
 shape = SubResource("CapsuleShape2D_72o5o")

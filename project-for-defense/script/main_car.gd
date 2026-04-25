@@ -1,7 +1,5 @@
 extends CharacterBody2D
 
-const SPEED = 300
-
 func _physics_process(delta: float) -> void:
 
 	var x = 0
@@ -21,6 +19,6 @@ func _physics_process(delta: float) -> void:
 		x *= 0.5
 		y *= 0.5
 
-	velocity.x = x * SPEED
-	velocity.y = y * SPEED
+	velocity.x = x * (Global.speed / 2)
+	velocity.y = y * (Global.speed / 2)
 	move_and_slide()

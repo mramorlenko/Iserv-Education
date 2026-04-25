@@ -1,17 +1,20 @@
-[gd_scene format=3 uid="uid://ctrwun16ac2ki"]
+[gd_scene load_steps=3 format=3 uid="uid://ctrwun16ac2ki"]
+
+[ext_resource type="Script" uid="uid://clg4sogj2tesp" path="res://script/main_menu.gd" id="1_dgl8l"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_t0v1j"]
 font_size = 48
 
-[node name="Control" type="Control" unique_id=1088660636]
+[node name="Control" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_dgl8l")
 
-[node name="Label" type="Label" parent="." unique_id=1133260554]
+[node name="Label" type="Label" parent="."]
 layout_mode = 0
 offset_left = 421.0
 offset_top = 45.0
@@ -20,10 +23,21 @@ offset_bottom = 112.0
 text = "Road Survival"
 label_settings = SubResource("LabelSettings_t0v1j")
 
-[node name="Button" type="Button" parent="." unique_id=1280952132]
+[node name="Button" type="Button" parent="."]
 layout_mode = 0
-offset_left = 528.0
-offset_top = 555.0
-offset_right = 629.0
-offset_bottom = 599.0
+offset_left = 522.0
+offset_top = 313.0
+offset_right = 623.0
+offset_bottom = 357.0
 text = "New game"
+
+[node name="queue" type="Button" parent="."]
+layout_mode = 0
+offset_left = 535.0
+offset_top = 400.0
+offset_right = 611.0
+offset_bottom = 442.0
+text = "Queue"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="queue" to="." method="_on_queue_pressed"]
