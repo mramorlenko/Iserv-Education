@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://ctrwun16ac2ki"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_t0v1j"]
+font_size = 48
+
+[node name="Control" type="Control" unique_id=1088660636]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="." unique_id=1133260554]
+layout_mode = 0
+offset_left = 421.0
+offset_top = 45.0
+offset_right = 735.0
+offset_bottom = 112.0
+text = "Road Survival"
+label_settings = SubResource("LabelSettings_t0v1j")
+
+[node name="Button" type="Button" parent="." unique_id=1280952132]
+layout_mode = 0
+offset_left = 528.0
+offset_top = 555.0
+offset_right = 629.0
+offset_bottom = 599.0
+text = "New game"

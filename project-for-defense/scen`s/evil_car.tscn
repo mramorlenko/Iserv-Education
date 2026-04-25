@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://dceb3brh4w6n3"]
+
+[ext_resource type="Texture2D" uid="uid://bbku6rcu081rw" path="res://Gemini_Generated_Image_ech891ech891ech8.png" id="1_4k5x7"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_l0nfs"]
+radius = 14.9
+height = 55.82
+
+[node name="Area2D" type="Area2D" unique_id=1971967827]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1336955386]
+shape = SubResource("CapsuleShape2D_l0nfs")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1529259657]
+scale = Vector2(0.04, 0.04)
+texture = ExtResource("1_4k5x7")
